@@ -2,14 +2,14 @@
 
 A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage wear, and elegant men's outfits.
 
-## 🎯 Project Overview
+## Project Overview
 
 **Brand Name:** ORVANO  
 **Industry:** Traditional Men's Wear  
 **Positioning:** "Old Money Elegance. Luxury in Every Stitch."  
 **Target Audience:** Men seeking timeless, classic ethnic and fusion wear with a refined aesthetic.
 
-## 🚀 Features
+## Features
 
 ### Homepage
 - Hero section with brand messaging
@@ -17,7 +17,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - About section highlighting heritage
 - Contact information
 
-### Catalog Page (NEW!)
+### Catalog Page
 - **Complete Product Catalog** with 20 ORVANO products
 - **Responsive Grid Layout**: 4 columns (desktop), 2 columns (tablet), 1 column (mobile)
 - **Advanced Filtering System**: Category, price range, and availability filters
@@ -46,7 +46,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Location information
 - Business hours
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
 ### Frontend Stack
 - **HTML5**: Semantic markup with accessibility features
@@ -62,7 +62,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 ```
 /
 ├── index.html              # Homepage
-├── catalog.html            # Product catalog (NEW!)
+├── catalog.html            # Product catalog
 ├── about.html              # About page
 ├── services.html           # Services page
 ├── contact.html            # Contact page
@@ -70,11 +70,11 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 │   └── products.json       # Product data (20 ORVANO products)
 ├── controllers/
 │   ├── appController.js    # Main application controller
-│   └── catalogController.js # Catalog functionality (NEW!)
+│   └── catalogController.js # Catalog functionality
 ├── assets/
 │   ├── css/
 │   │   ├── style.css       # Global styles
-│   │   └── catalog.css     # Catalog-specific styles (NEW!)
+│   │   └── catalog.css     # Catalog-specific styles
 │   ├── js/
 │   │   ├── navbar.js       # Navigation functionality
 │   │   └── main.js         # Main JavaScript
@@ -82,7 +82,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 └── README.md               # This file
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 ### Breakpoints
 - **Desktop**: 1200px+ (4-column grid)
@@ -96,7 +96,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Accessible navigation
 - Performance optimized
 
-## 🎨 Design System
+## Design System
 
 ### Typography
 - **Serif Fonts**: Playfair Display for headings (luxury feel)
@@ -115,7 +115,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Professional spacing and layout
 - Luxury-inspired visual hierarchy
 
-## 🛍️ Product Catalog
+## Product Catalog
 
 ### Categories
 1. **Traditional Kurtas** - Classic ethnic wear
@@ -137,7 +137,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - ORVANO Classic Combo collections (₹1,999, was ₹2,999)
 - ORVANO Cuban Collar Shirt (₹1,999, was ₹2,999)
 
-## 🔧 Backend Integration Ready
+## Backend Integration Ready
 
 ### API Endpoints (Future Implementation)
 - `GET /api/products` - Fetch all products
@@ -152,7 +152,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Price and discount calculations
 - Inventory status tracking
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Modern web browser
@@ -170,14 +170,14 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Easy to customize and extend
 - Backend-ready for Node.js/Express integration
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome 90+
 - Firefox 88+
 - Safari 14+
 - Edge 90+
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 ### Planned Features
 - Shopping cart functionality
@@ -194,7 +194,7 @@ A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage 
 - Order management system
 - Inventory tracking
 
-## 🤝 Contributing
+## Contributing
 
 This project is designed for easy collaboration:
 - Clean, documented code
@@ -202,14 +202,14 @@ This project is designed for easy collaboration:
 - Consistent coding standards
 - Responsive design principles
 
-## 📄 License
+## License
 
 This project is proprietary to ORVANO brand.
 
-## 📞 Support
+## Support
 
 For technical support or questions about the implementation, please refer to the development team.
 
 ---
 
-**Built with ❤️ for ORVANO - Luxury in Every Stitch**
+**Built with dedication for ORVANO - Luxury in Every Stitch**
