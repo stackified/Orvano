@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ORVANO</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Browse ORVANO's complete collection of traditional men's wear - kurtas, classic outfits, and heritage clothing.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Notification Bar -->
+    <div class="notification-bar">
+        <p>Limited Stock Alert! Get Your Classic Combo Today.</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">ORVANO</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="catalog.html" class="nav-link active" data-page="catalog">Catalog</a></li>
+                    <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn user-btn" aria-label="User Account">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Shopping Cart">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Products</h1>
+                <p class="page-subtitle">Discover Our Complete Collection</p>
+            </div>
+        </section>
+
+        <!-- Catalog Controls -->
+        <section class="catalog-controls">
+            <div class="container">
+                <div class="controls-container">
+                    <div class="filter-section">
+                        <button class="filter-btn" id="filterBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46 22,3"/>
+                            </svg>
+                            Filter
+                        </button>
+                    </div>
+                    
+                    <div class="search-section">
+                        <input type="text" class="search-input" placeholder="Search products..." aria-label="Search products">
+                    </div>
+                    
+                    <div class="sort-section">
+                        <select class="sort-select" id="sortSelect" aria-label="Sort products">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-summary">
+                        <span>Loading products...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Content -->
+        <section class="catalog-content">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar" id="filterSidebar">
+        <div class="filter-sidebar-header">
+            <h2 class="filter-sidebar-title">Filters</h2>
+            <button class="close-filter-btn" id="closeFilterBtn">&times;</button>
+        </div>
+        
+        <div class="filter-group">
+            <h3 class="filter-group-title">Categories</h3>
+            <div class="category-filters">
+                <div class="category-filter-item">
+                    <input type="radio" id="all-categories" name="category" value="all" class="category-filter" checked>
+                    <label for="all-categories">All Categories</label>
+                </div>
+                <div class="category-filter-item">
+                    <input type="radio" id="kurtas" name="category" value="kurtas" class="category-filter">
+                    <label for="kurtas">Traditional Kurtas</label>
+                </div>
+                <div class="category-filter-item">
+                    <input type="radio" id="pants" name="category" value="pants" class="category-filter">
+                    <label for="pants">Traditional Pants</label>
+                </div>
+                <div class="category-filter-item">
+                    <input type="radio" id="combos" name="category" value="combos" class="category-filter">
+                    <label for="combos">Complete Combos</label>
+                </div>
+                <div class="category-filter-item">
+                    <input type="radio" id="shirts" name="category" value="shirts" class="category-filter">
+                    <label for="shirts">Cuban Collar Shirts</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-group">
+            <h3 class="filter-group-title">Price Range</h3>
+            <div class="price-filters">
+                <div class="price-filter-item">
+                    <input type="radio" id="all-prices" name="price" value="all" checked>
+                    <label for="all-prices">All Prices</label>
+                </div>
+                <div class="price-filter-item">
+                    <input type="radio" id="under-1000" name="price" value="under-1000">
+                    <label for="under-1000">Under ₹1,000</label>
+                </div>
+                <div class="price-filter-item">
+                    <input type="radio" id="1000-2000" name="price" value="1000-2000">
+                    <label for="1000-2000">₹1,000 - ₹2,000</label>
+                </div>
+                <div class="price-filter-item">
+                    <input type="radio" id="over-2000" name="price" value="over-2000">
+                    <label for="over-2000">Over ₹2,000</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-group">
+            <h3 class="filter-group-title">Availability</h3>
+            <div class="availability-filters">
+                <div class="availability-filter-item">
+                    <input type="checkbox" id="in-stock" name="availability" value="in-stock" checked>
+                    <label for="in-stock">In Stock</label>
+                </div>
+                <div class="availability-filter-item">
+                    <input type="checkbox" id="sold-out" name="availability" value="sold-out">
+                    <label for="sold-out">Sold Out</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-actions">
+            <button class="clear-filters-btn" onclick="catalogController.clearFilters()">
+                Clear All Filters
+            </button>
+        </div>
+    </div>
+
+    <!-- Filter Sidebar Overlay -->
+    <div class="filter-sidebar-overlay" id="filterOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">FOOTER MENU</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Search</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Return / Exchange Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">WWW.ORVANO.COM</h3>
+                    <p class="footer-text">Crafting Excellence Since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">MAIN MENU</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="catalog.html" class="footer-link">Catalog</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ORVANO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <button class="close-btn" id="closeSearch">&times;</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search for products..." class="search-input">
+                <button class="search-submit">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="controllers/catalogController.js"></script>
+    
+    <script>
+        // Additional catalog-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter sidebar functionality
+            const filterBtn = document.getElementById('filterBtn');
+            const filterSidebar = document.getElementById('filterSidebar');
+            const filterOverlay = document.getElementById('filterOverlay');
+            const closeFilterBtn = document.getElementById('closeFilterBtn');
+
+            function openFilterSidebar() {
+                filterSidebar.classList.add('active');
+                filterOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeFilterSidebar() {
+                filterSidebar.classList.remove('active');
+                filterOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            filterBtn.addEventListener('click', openFilterSidebar);
+            closeFilterBtn.addEventListener('click', closeFilterSidebar);
+            filterOverlay.addEventListener('click', closeFilterSidebar);
+
+            // Close sidebar on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeFilterSidebar();
+                }
+            });
+
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            let searchTimeout;
+
+            searchInput.addEventListener('input', function(e) {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    if (window.catalogController) {
+                        window.catalogController.handleSearch(e.target.value);
+                    }
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
