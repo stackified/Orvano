@@ -2,6 +2,8 @@
 
 A luxury-inspired website for ORVANO, featuring classic kurtas, pants, heritage wear, and elegant men's outfits.
 
+**Live demo:** https://stackified.github.io/Orvano/
+
 ## Project Overview
 
 **Brand Name:** ORVANO  
@@ -204,11 +206,12 @@ This project is designed for easy collaboration:
 
 ## License
 
-This project is proprietary to ORVANO brand.
+Released under the [MIT License](LICENSE). You are free to use the code as a
+learning reference or starting point.
 
-## Support
-
-For technical support or questions about the implementation, please refer to the development team.
+Note: "ORVANO" is used here as a demo brand name, and the product photography and
+brand imagery in `assets/images/` belong to their respective owners. Please replace
+them with your own assets before using this project for anything public.
 
 ---
 
