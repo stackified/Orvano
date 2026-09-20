@@ -108,9 +108,13 @@
     // Smooth scroll for navigation links
     $$('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = $(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            // Ignore placeholder links ("#"): querySelector('#') is an invalid
+            // selector and would throw. Only smooth-scroll to real targets.
+            if (!href || href === '#') return;
+            const target = $(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
