@@ -474,7 +474,12 @@ class CatalogController {
             summaryText += ` • ${this.getPriceRangeName(this.currentPriceRange)}`;
         }
 
-        filterSummary.innerHTML = `<span>${summaryText}</span>`;
+        // Build the summary with textContent rather than innerHTML so that any
+        // filter value read from the DOM cannot be reinterpreted as HTML.
+        filterSummary.replaceChildren();
+        const span = document.createElement('span');
+        span.textContent = summaryText;
+        filterSummary.appendChild(span);
     }
 
     getCategoryName(categoryId) {
