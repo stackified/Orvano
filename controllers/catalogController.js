@@ -14,6 +14,10 @@ class CatalogController {
         try {
             await this.loadProducts();
             this.setupEventListeners();
+            // Apply the default filters (e.g. "In Stock" only) before the first
+            // paint so the grid matches the checkbox state instead of briefly
+            // showing sold-out items.
+            this.filterProducts();
             this.renderCatalog();
         } catch (error) {
             console.error('Error initializing catalog:', error);
@@ -139,11 +143,10 @@ class CatalogController {
     }
 
     setupEventListeners() {
-        // Filter button
-        const filterBtn = document.querySelector('.filter-btn');
-        if (filterBtn) {
-            filterBtn.addEventListener('click', () => this.toggleFilterSidebar());
-        }
+        // Filter sidebar open/close (including the overlay, body scroll lock, and
+        // Escape key) is wired up in the inline script in catalog.html. Binding the
+        // filter button here as well caused the two handlers to fight each other, so
+        // it is intentionally left to that single owner.
 
         // Category filters
         const categoryFilters = document.querySelectorAll('.category-filter');
